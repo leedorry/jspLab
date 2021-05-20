@@ -1,4 +1,4 @@
-/*±âº» ·¹ÀÌ¾Æ¿ô*/
+/*ê¸°ë³¸ ë ˆì´ì•„ì›ƒ*/
 #wrap {
 	width: 1003px;
 	margin: 0 auto;
@@ -25,16 +25,16 @@
 	padding: 15px 0 0 350px;
 }
 
-/*±âº» ±Û²Ã ¹× ¸µÅ© ÅØ½ºÆ® ²Ù¹Ì±â*/
+/*ê¸°ë³¸ ê¸€ê¼´ ë° ë§í¬ í…ìŠ¤íŠ¸ ê¾¸ë¯¸ê¸°*/
 body {
-	font: 12px gulim, "±¼¸²", sans-serif;
+	font: 12px gulim, "êµ´ë¦¼", sans-serif;
 	color: #333;
 	background-color: #000;
 	min-width: 1003px;
 }
 
 select, input, textarea, button {
-	font: 12px gulim, "±¼¸²", sans-serif;
+	font: 12px gulim, "êµ´ë¦¼", sans-serif;
 	color: #333;
 }
 
@@ -56,14 +56,14 @@ a:hover, a:focus {
 	text-indent: -9999px;
 }
 
-/*Çì´õ ¿µ¿ª*/
+/*í—¤ë” ì˜ì—­*/
 #header h1 {
 	position: absolute;
 	left: 36px;
 	top: 53px;
 }
 
-/*·Î±×ÀÎ ¿µ¿ª*/
+/*ë¡œê·¸ì¸ ì˜ì—­*/
 .login_wrap {
 	position: relative;
 }
@@ -131,7 +131,7 @@ a:hover, a:focus {
 	margin-left: 20px;
 }
 
-/*À¯Æ¿¸Ş´º ¿µ¿ª*/
+/*ìœ í‹¸ë©”ë‰´ ì˜ì—­*/
 #util_menu dd {
 	float: left;
 	padding: 0 5px;
@@ -167,7 +167,7 @@ a:hover, a:focus {
 	padding-left: 5px;
 }
 
-/*GNB ¿µ¿ª*/
+/*GNB ì˜ì—­*/
 #gnb {
 	position: absolute;
 	top: 175px;
@@ -214,7 +214,7 @@ a:hover, a:focus {
 	margin-left: 438px;
 }
 
-/*ÀüÃ¼ ¸Ş´º ¿µ¿ª*/
+/*ì „ì²´ ë©”ë‰´ ì˜ì—­*/
 #total_btn {
 	position: absolute;
 	bottom: 18px;
@@ -252,9 +252,9 @@ a:hover, a:focus {
 	right: 16px;
 }
 
-/*¿À´Ã ³¯Â¥ ¿µ¿ª*/
+/*ì˜¤ëŠ˜ ë‚ ì§œ ì˜ì—­*/
 #date_wrap {
-	font-family: "nanum Gothic", Malgun Gothic, "¸¼Àº°íµñ", sans-serif;
+	font-family: "nanum Gothic", Malgun Gothic, "ë§‘ì€ê³ ë”•", sans-serif;
 	font-weight: bold;
 	color: #aaa;
 	position: absolute;
@@ -272,7 +272,7 @@ a:hover, a:focus {
 	padding: 15px;
 }
 
-/*Äü¸Ş´º*/
+/*í€µë©”ë‰´*/
 #quick_menu {
 	width: 95px;
 	text-align: center;
@@ -281,7 +281,7 @@ a:hover, a:focus {
 	right: -96px;
 }
 
-/*¹Ù´Ú¿µ¿ª*/
+/*ë°”ë‹¥ì˜ì—­*/
 #inner_footer h3.footer_logo {
 	position: absolute;
 	left: 35px;
