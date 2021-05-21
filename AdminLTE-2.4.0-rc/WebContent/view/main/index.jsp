@@ -1,14 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <%@ include file="../include/header.jspf" %>
 
+<%-- <% 	String lang = request.getParameter("lang"); %>
+<fmt:setLocale value="<%=lang %>"/> --%>
+
+<fmt:setLocale value="${param.lang}" />
+<fmt:setBundle var = "message" basename="resource.message" />
 		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
 				<h1>
-					대시보드 <small>Control panel</small>
+					<fmt:message bundle="${message}" key="GREETING" /> <small>Control panel</small>
 				</h1>
 				<ol class="breadcrumb">
 					<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
