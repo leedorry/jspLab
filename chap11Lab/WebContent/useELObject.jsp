@@ -7,8 +7,12 @@
 <body>
 
 요청 URI: ${pageContext.request.requestURI}<br>
-request의 name 속성: ${requestScope.name}<br>
-code 파라미터: ${param.code}
+요청 URI: <%= request.getRequestURI() %> <br>
 
+request의 name 속성: ${requestScope.name}<br>
+request의 name 속성: <%= request.getAttribute("name") %><br>
+
+code 파라미터: ${param.code} <br>
+code 파라미터: <%= request.getParameter("code") %>
 </body>
 </html>
