@@ -36,8 +36,8 @@ public class GetMessageListService {
 			int endRow = 0;
 			if (messageTotalCount > 0) {
 				firstRow =
-						(pageNumber - 1) * MESSAGE_COUNT_PER_PAGE + 1;
-				endRow = firstRow + MESSAGE_COUNT_PER_PAGE - 1;
+						(pageNumber - 1) * MESSAGE_COUNT_PER_PAGE + 1;  // 1
+				endRow = firstRow + MESSAGE_COUNT_PER_PAGE - 1;  // 3
 				messageList =
 						messageDao.selectList(conn, firstRow, endRow);
 			} else {

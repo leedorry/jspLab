@@ -6,23 +6,23 @@ import guestbook.model.Message;
 
 public class MessageListView {
 
-	private int messageTotalCount;
-	private int currentPageNumber;
+	private int messageTotalCount;  // 4
+	private int currentPageNumber;  // 1
 	private List<Message> messageList;
 	private int pageTotalCount;
-	private int messageCountPerPage;
-	private int firstRow;
-	private int endRow;
+	private int messageCountPerPage;  // 3
+	private int firstRow;  // 1
+	private int endRow;	   // 3
 
 	public MessageListView(List<Message> messageList, int messageTotalCount, 
 			int currentPageNumber, int messageCountPerPage, 
 			int startRow, int endRow) {
 		this.messageList = messageList;
-		this.messageTotalCount = messageTotalCount;
-		this.currentPageNumber = currentPageNumber;
-		this.messageCountPerPage = messageCountPerPage;
-		this.firstRow = startRow;
-		this.endRow = endRow;
+		this.messageTotalCount = messageTotalCount;  // 0
+		this.currentPageNumber = currentPageNumber;  // 0
+		this.messageCountPerPage = messageCountPerPage;  // 3
+		this.firstRow = startRow;  // 0
+		this.endRow = endRow;	   // 0
 
 		calculatePageTotalCount();
 	}
@@ -31,9 +31,9 @@ public class MessageListView {
 		if (messageTotalCount == 0) {
 			pageTotalCount = 0;
 		} else {
-			pageTotalCount = messageTotalCount / messageCountPerPage;
+			pageTotalCount = messageTotalCount / messageCountPerPage;  // 4/3=1
 			if (messageTotalCount % messageCountPerPage > 0) {
-				pageTotalCount++;
+				pageTotalCount++;  // 1+1=2
 			}
 		}
 	}
