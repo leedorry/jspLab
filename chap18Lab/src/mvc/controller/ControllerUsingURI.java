@@ -19,12 +19,15 @@ import mvc.command.NullHandler;
 public class ControllerUsingURI extends HttpServlet {
 
     // <커맨드, 핸들러인스턴스> 매핑 정보 저장
-	// {"/hello.do":helloHandler객체, "someCommand":someHandler객체}
+	// {"/hello.do":helloHandler객체}
     private Map<String, CommandHandler> commandHandlerMap = 
     		new HashMap<>();
 
     public void init() throws ServletException {
         String configFile = getInitParameter("configFile");
+        
+        // Properties = map 자료구조로 Key=String, Value=String, {Key:value}
+        // {"hello.do":"mvc.hello.HelloHandler"}
         Properties prop = new Properties();
         String configFilePath = getServletContext().getRealPath(configFile);
         try (FileReader fis = new FileReader(configFilePath)) {
