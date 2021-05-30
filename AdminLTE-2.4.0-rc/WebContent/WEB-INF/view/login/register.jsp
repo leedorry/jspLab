@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,13 +33,20 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <a href="../main/index.jsp"><b>Admin</b>LTE</a>
   </div>
 
   <div class="register-box-body">
-    <p class="login-box-msg">Register a new membership</p>
+    <p class="login-box-msg">
+    	<c:if test="${errors.id}">ID를 입력하세요.</c:if>
+	<c:if test="${errors.duplicateId}">이미 사용중인 아이디입니다.</c:if>
+    <c:if test="${errors.name}">이름을 입력하세요.</c:if>
+    <c:if test="${errors.password}">비밀번호를 입력하세요.</c:if>
+    <c:if test="${errors.confirmPassword}">확인을 입력하세요.</c:if>
+	<c:if test="${errors.notMatch}">비밀번호와 확인이 일치하지 않습니다.</c:if>
+    </p>
 
-    <form action="registerprocess.jsp" method="post">
+    <form action="join.do" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Full name" name="name">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -66,7 +73,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">가입하기</button>
         </div>
         <!-- /.col -->
       </div>
@@ -80,18 +87,18 @@
         Google+</a>
     </div>
 
-    <a href="login.html" class="text-center">I already have a membership</a>
+    <a href="login.do" class="text-center">가입 취소</a>
   </div>
   <!-- /.form-box -->
 </div>
 <!-- /.register-box -->
 
 <!-- jQuery 3 -->
-<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/resources/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<%=request.getContextPath()%>/resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- iCheck -->
-<script src="../../plugins/iCheck/icheck.min.js"></script>
+<script src="<%=request.getContextPath()%>/resources/plugins/iCheck/icheck.min.js"></script>
 <script>
   $(function () {
     $('input').iCheck({

@@ -44,7 +44,7 @@
 		<div class="login-box-body">
 			<p class="login-box-msg">로그인하여 세션을 시작하십시오.</p>
 
-			<form action="./loginprocess.jsp" method="post">
+			<form action="${pageContext.request.contextPath}/login.do" method="post">
 				<div class="form-group has-feedback">
 					<input type="email" class="form-control" id="email" name="email"
 						placeholder="이메일"> <span
@@ -80,7 +80,7 @@
 			</div>
 			<!-- /.social-auth-links -->
 
-			<a href="#">비밀번호 찾기</a><br> <a href="register.jsp"
+			<a href="#">비밀번호 찾기</a><br> <a href="join.do"
 				class="text-center">회원가입</a>
 
 		</div>
