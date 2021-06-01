@@ -404,6 +404,9 @@ boolean login = memberId == null ? false : true;
 					</a>
 						<ul class="treeview-menu">
 							<li><a
+								href="${pageContext.request.contextPath}/memberArticle/list.do"><i
+									class="fa fa-circle-o"></i> 회원제 게시판</a></li>
+							<li><a
 								href="<%=request.getContextPath()%>/view/guestbook/list.jsp"><i
 									class="fa fa-circle-o"></i> 방명록</a></li>
 							<li><a
